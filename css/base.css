@@ -1,12 +1,28 @@
+@font-face {
+	font-family: "Linux Biolinum";
+	src: url('../fonts/LinBiolinum_R.woff');
+}
+
+@font-face {
+	font-family: "Inconsolata";
+	src: url('../fonts/inconsolata.woff');
+}
+
 body {
 	background-color: var(--bg);
 	color: var(--fg);
+	font-family: "Linux Biolinum";
 	font-size: 18px;
 	padding-left: 30px;
 	padding-right: 30px;
 	margin-left: 250px;
 	margin-right: 250px;
 }
+
+code {
+	font-family: "Inconsolata";
+}
+
 a:link {
 	color: var(--color12);
 	text-decoration: none;
