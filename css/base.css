@@ -4,7 +4,7 @@
 }
 
 @font-face {
-	font-family: "Inconsolata";
+	font-family: "Monospaced Font";
 	src: url('../fonts/inconsolata.woff');
 }
 
@@ -20,22 +20,22 @@ body {
 }
 
 code {
-	font-family: "Inconsolata";
+	font-family: "Monospaced Font";
 }
 
 a:link {
-	color: var(--color12);
+	color: var(--color6);
 	text-decoration: none;
 	padding: 2px;
 	font-weight: bold;
 }
 
 a:visited {
-	color: var(--color12);
+	color: var(--color6);
 }
 
 a:hover {
-	background-color: var(--color5);
+	background-color: var(--color6);
 	color: var(--bg);
 	padding: 2px;
 	font-weight: bolder;
