@@ -13,8 +13,8 @@ body {
 	color: var(--fg);
 	font-family: "Linux Biolinum";
 	font-size: 18px;
-	padding-left: 30px;
-	padding-right: 30px;
+/*	padding-left: 30px;
+	padding-right: 30px;*/
 	margin-left: 250px;
 	margin-right: 250px;
 }
