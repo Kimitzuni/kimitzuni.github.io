@@ -1,56 +1,78 @@
 <!DOCTYPE html>
 <html lang="en-gb">
 <head>
-	<title>Rebecca White's Site</title>
+	<title>Rebecca White's Page</title>
+	<link rel="stylesheet" href="css/colorscheme-gruvbox.css" />
 	<link rel="stylesheet" href="css/base.css" />
+
 </head>
+
 <body>
-	<div class="title">
-		<h1>Rebecca White's Site</h1>
+	<h1>Rebecca White's Page</h1>
+	
+	<div class="sidebar">
+	<h2>Links</h2>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="https://github.com/Kimitzuni">GitHub</a></li>
+		<li><a href="https://gitlab.com/Kimitzuni">GitLab</a></li>
+	</ul>
+	<h3>Social Stuff</h3>
+	<ul>
+		<li><a href="https://youtube.com/channel/UCw-KUmowVpeozuzdM1POLvA">YouTube</a></li>
+		<li><a href="https://odysee.com/@rtiannew">Odysee</a></li>
+	</ul>
+
+	<h3>Personal</h3>
+	<ul>
+		<li><a href="about.html">About</a></li>
+		<li><a href="edu.html">Education</a></li>
+		<li><a href="mailto:rtw@null.net">Email Me</a></li>
+		<li><a href="rants.html">Rants</a></li>
+		<li><a href="rss.xml">RSS Feed</a></li>
+		<li><a href="library.html">Library</a></li>
+	</ul>
 	</div>
 
-	<div class="navigation">
+
+	<h2>Welcome</h2>
 	<p>
-		<a href="edu.html">Education</a>
-		<a href="about.html">About</a>
-		<a href="contact.html">Contact</a>
+	Welcome, I am Rebecca, I am known for being:
+
+	<ul>
+		<li>Mathematics and Computer Nerd</li>
+		<li>Avid Arch Linux User</li>
+		<li>British IBM ThinkPad User</li>
+		<li>Occasional Video Maker</li>
+		<li>Trans, Welsh and Asexual</li>
+	</ul>
+
+	If you want to know some more about me, you can see the	<a href="about.html">About</a> page.
+	For my education, you can refer to the <a href="edu.html">Education</a> page.
 	</p>
-	</div>
 
-	<div class="mainText">
-	<br>
-	<div id="quicklinks">
+	<h3>The Site</h3>
+	<p>
+	You may notice, the site is quite "minimal", in that it's only text and basic styling. That's it. I may change
+	the colorscheme, but even then I do that with a <code>sed</code> command (<code>sed -i 's/(current)/(new)/' *.html</code>).
+	The reason that I only have plain text on this site is because that is all I need. That's all you need for a site.
+	</p>
 
-		<a href="https://github.com/Kimitzuni">GitHub</a><br>
-		&nbsp;&nbsp;The programs and other stuff for public use
-		<br>
+	<h3>Linux</h3>
+	<p>
+	I have been using GNU/Linux since 2012, but primarily since 2017, as I was previously using Windows 7, and then
+	Windows 10. I could see that Windows 10, even in 2017 with 1703, was going to get a lot more bloated, and a lot
+	more slower. And I was indeed correct. 
 
-		</div>
-		
-		<br>
+	<p>
 
-		<div class="main">
+	<h3>Rants</h3>
 
-		<h3>About Me</h3>
-		<p>
-		Hi there, I am Rebecca, I am currently a student attending St Helens College, on
-		the <i>Skills for Further Learning & Employment</i> course. I am intending on
-		progressing onto the <i>IT Level 1</i> course in September 2022.<br>
-		<br>
+	<p>
+	<ul>
+		<li><i>March. 29th 2022</i> - <a href="rants.html#modern-laptops-are-terrible">Modern Laptops are Terrible</a></li>
+	</ul>
+	</p>
 
-		I have been using GNU/Linux for 10 years, but using it primarilly since 2017. I use
-		a Lenovo ThinkPad X230 with a classic keyboard from an X220.
-		<br><br>
-
-		I use Suckless DWM, and mainly terminal programs, as I find them easier to work
-		with. I also run Arch Linux, and run Xorg. People give Arch users a hard time, when
-		really it's Wayland users that won't shut up about the stupid software they use.<br>
-		<br>
-
-		Jk, its all fun 'n' games yknow.
-		</p>
-
-</div>
-</div>
 </body>
 </html>

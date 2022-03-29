@@ -1,52 +1,38 @@
-@import "colorscheme.css";
-
 body {
-    font-family: sans-serif; 
-    background-color: var(--background);
-    color: var(--foreground); 
+	background-color: var(--bg);
+	color: var(--fg);
+	font-size: 18px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-left: 250px;
+	margin-right: 250px;
 }
-
 a:link {
-    color: var(--color12);
-    text-decoration: none;
-    padding: 2px;
-    font-weight: bold;
+	color: var(--color12);
+	text-decoration: none;
+	padding: 2px;
+	font-weight: bold;
 }
 
 a:visited {
-    color: var(--color12);
+	color: var(--color12);
 }
 
 a:hover {
-    background-color: var(--color15);
-    color: var(--background);
-    padding: 2px;
-    font-weight: bolder;
+	background-color: var(--color5);
+	color: var(--bg);
+	padding: 2px;
+	font-weight: bolder;
 }
 
-code {
-	font-size: 18px;
+.sidebar {
+	float: right;
+	min-width: 200px;
+	max-width: 300px;
+	background-color: var(--color0);
+	padding: 5px;
+	border-radius: 0 10px 30px 0;
 }
-
-.title {
-    font-style: italic;
-    text-align: center;
-}
-
-.navigation {
-    text-align: center;
-}
-
-.mainText {
-    border: 1px dashed var(--foreground);
-    border-radius: 8px 8px 8px 8px;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
 
 th {
     padding: 10px;
