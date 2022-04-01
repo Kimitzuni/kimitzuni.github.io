@@ -1,13 +1,13 @@
 <rss version="2.0">
 <channel>
-	<title>Rebecca White's Rants</title>
-	<description>The Rants but in RSS</description>
+	<title>Rebecca White's Blog</title>
+	<description>Rebecca's Blog</description>
 	<language>en-gb</language>
 	<link>https://kimitzuni.github.io/rss.xml</link>
 
 	<item>
 		<title>Modern Laptops are Terrible</title>
-		<link>https://kimitzuni.github.io/rants.html#modern-laptops-are-terrible</link>
+		<link>https://kimitzuni.github.io/blog.html#modern-laptops-are-terrible</link>
 		<pubDate>Tue, 29 March 2022</pubDate>
 
 		<description>
