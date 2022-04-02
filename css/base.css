@@ -69,3 +69,8 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: var(--background);
 }
+
+img {
+	vertical-align: -5px;
+	width: 25px;
+}
