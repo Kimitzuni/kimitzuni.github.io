@@ -1,22 +1,22 @@
-/* husk Colour Scheme */
+/* DWM Colour Scheme */
 
 :root {
-	--color0: #282a2e;
-	--color1: #a54242;
-	--color2: #8c9440;
-	--color3: #de935f;
-	--color4: #5f819d;
-	--color5: #85678f;
-	--color6: #5e8d87;
-	--color7: #707880;
-	--color8: #373b41;
-	--color9: #cc6666;
-	--color10: #b5bd68;
-	--color11: #f0c674;
-	--color12: #81a2be;
-	--color13: #b294bb;
-	--color14: #8abeb7;
-	--color15: #c5c8c6;
-	--bg: #1d1f21;
-	--fg: var(--color15);
+	--fg: #8ed4c2;
+	--bg: #0a0d1e;
+	--color0: #0a0d1e;
+	--color1: #CE525E;
+	--color2: #2A9F6B;
+	--color3: #EAA76C;
+	--color4: #3B5E8B;
+	--color5: #4F6790;
+	--color6: #B97288;
+	--color7: #8ed4c2;
+	--color8: #639487;
+	--color9: #CE525E;
+	--color10: #2A9F6B;
+	--color11: #EAA76C;
+	--color12: #3B5E8B;
+	--color13: #4F6790;
+	--color14: #B97288;
+	--color15: #8ed4c2;
 }
