@@ -1,22 +1,22 @@
-/* DWM Colour Scheme */
+/* ayu Colour Scheme */
 
 :root {
-	--fg: #8ed4c2;
-	--bg: #0a0d1e;
-	--color0: #0a0d1e;
-	--color1: #CE525E;
-	--color2: #2A9F6B;
-	--color3: #EAA76C;
-	--color4: #3B5E8B;
-	--color5: #4F6790;
-	--color6: #B97288;
-	--color7: #8ed4c2;
-	--color8: #639487;
-	--color9: #CE525E;
-	--color10: #2A9F6B;
-	--color11: #EAA76C;
-	--color12: #3B5E8B;
-	--color13: #4F6790;
-	--color14: #B97288;
-	--color15: #8ed4c2;
+	--color0: #191e2a;
+	--color1: #ed8274;
+	--color10: #bae67e;
+	--color11: #ffd580;
+	--color12: #73d0ff;
+	--color13: #d4bfff;
+	--color14: #95e6cb;
+	--color15: #ffffff;
+	--color2: #a6cc70;
+	--color3: #fad07b;
+	--color4: #6dcbfa;
+	--color5: #cfbafa;
+	--color6: #90e1c6;
+	--color7: #c7c7c7;
+	--color8: #686868;
+	--color9: #f28779;
+	--bg: #1f2430;
+	--fg: #cbccc6;
 }
