@@ -1,0 +1,162 @@
+/* Colours
+
+I'm a Linux user and I like Xresources compatibility
+so I name my colours according to Xresources standard
+*/
+:root {
+    --color0: #191e2a;
+    --color1: #ed8274;
+    --color2: #a6cc70;
+    --color4: #6dcbfa;
+    --color5: #cfbafa;
+    --color9: #f28779;
+    --background: #1f2430;
+    --foreground: #cbccc6;
+
+    /* Non Xresources Standard */
+    --shadow: 0px 8px 16px 0px rgba(0,2,0,0.75);
+}
+
+@font-face {
+	font-family: "Linux Biolinum";
+	src: url('fonts/LinBiolinum_R.woff');
+}
+
+@font-face {
+	font-family: "Monospaced Font";
+	src: url('fonts/inconsolata.woff');
+}
+
+body {
+    background-color: var(--background);
+    background-image: url('https://gitlab.com/Kimitzuni/wallpapers/-/raw/main/Night/1637700445388.jpg');
+    background-blend-mode: overlay;
+    background-position: center;
+    color: var(--foreground);
+    font-family: "Linux Biolinum", Arial;
+    font-size: 20px;
+    padding: 10px;
+    height: 100vh;
+}
+
+code {
+	font-family: "Monospaced Font";
+}
+
+.topnav {
+    background-color: var(--color0);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border-radius: 0px 0px 8px 8px;
+    opacity: 75%;
+}
+
+
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: var(--foreground);
+}
+.active, .dropdown .dropbtn .active  {
+    background-color: var(--color4) !important;
+    color: var(--background) !important;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: var(--foreground);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color0);
+    padding: 10px;
+    min-width: 160x;
+    box-shadow: var(--shadow);
+    z-index: 1;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.dropdown-content a {
+    float: none;
+    color: var(--foreground);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--color1);
+    color: var(--color0);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--color9);
+    color: var(--background);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+p a:link {
+    color: var(--color9);
+    text-decoration: none;
+}
+
+p a:hover, p a:hover:visited {
+    background-color: var(--color9);
+    color: var(--background);
+    padding: 1.75px;
+    text-decoration: none;
+}
+
+p a:visited {
+    color: var(--color9);
+    text-decoration: none;
+}
+
+table {
+    opacity: 75%;
+}
+
+th {
+    padding: 12px;
+    text-align: center;
+    font-weight: normal;
+}
+
+td {
+    padding: 16px;
+    text-align: center;
+    font-weight: normal;
+}
+
+tr:nth-child(even) {
+   background-color: var(--color0);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--background);
+}

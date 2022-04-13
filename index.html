@@ -1,83 +1,68 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-<head>
-	<title>Rebecca White's Page</title>
-	<link rel="stylesheet" href="css/colors.css" />
-	<link rel="stylesheet" href="css/base.css" />
+    <head>
+        <title>Rebecca White's Site</title>
 
-</head>
+        <link rel="stylesheet" href="base.css" />
+    </head>
 
-<body>
-	<h1>Rebecca White's Page</h1>
-	
-	<div class="sidebar">
-	<h2>Links</h2>
-	<ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="https://github.com/Kimitzuni">GitHub</a></li>
-		<li><a href="https://gitlab.com/Kimitzuni">GitLab</a></li>
-	</ul>
-	<h3>Social Stuff</h3>
-	<ul>
-		<li><a href="https://youtube.com/channel/UCw-KUmowVpeozuzdM1POLvA">YouTube</a></li>
-		<li><a href="https://odysee.com/@rtiannew">Odysee</a></li>
-	</ul>
+    <body>
+        <div class="topnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="contact.html">Contact</a>
 
-	<h3>Personal</h3>
-	<ul>
-		<li><a href="about.html">About</a></li>
-		<li><a href="edu.html">Education</a></li>
-		<li><a href="mailto:rtw@null.net">Email Me</a></li>
-		<li><a href="blog.html">Blog</a></li>
-		<li><a href="rss.xml">RSS Feed</a></li>
-		<li><a href="library.html">Library</a></li>
-	</ul>
-	</div>
+            <div class="dropdown">
+                <button class="dropbtn">Personal Links
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://www.youtube.com/channel/UCw-KUmowVpeozuzdM1POLvA">YouTube</a>
+                  <a href="https://odysee.com/@rtiannew:7">Odysee</a>
+                  <a href="https://github.com/Kimitzuni">GitHub</a>
+                  <a href="https://gitlab.com/Kimitzuni">GitLab</a>
+                </div>
+              </div>
 
 
-	<h2>Welcome</h2>
-	<p>
-	Welcome, I am Rebecca, I am known for being:
+            <div class="dropdown">
+              <button class="dropbtn">About
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="edu.html">Education</a>
+                <a href="work.html">Professional Experience</a>
+                <a href="hardware.html">Hardware</a>
+              </div>
+            </div>
 
-	<ul>
-		<li>Mathematics and Computer Nerd</li>
-		<li>Avid Arch Linux User</li>
-		<li>British IBM ThinkPad User</li>
-		<li>Occasional Video Maker</li>
-		<li>Trans, Welsh and Asexual</li>
-	</ul>
+          </div>
 
-	If you want to know some more about me, you can see the	<a href="about.html">About</a> page.
-	For my education, you can refer to the <a href="edu.html">Education</a> page. And if you want
-	to view the source code for this site, it is freely available on
-	<a href="https://github.com/Kimitzuni/kimitzuni.github.io/">GitHub</a>
-	</p>
+          <h1>Hello</h1>
+          <p>Hello there, my name is Rebecca and I am a software developer from Wales. I primarilly use Linux, specifically the <a href="https://archlinux.org">Arch Linux</a> distribution, with the <a href="https://dwm.suckless.org">Suckless DWM</a> window manager (my build can be found on <a href="https://github.com/Kimitzuni/dwm">GitHub</a>)<br><br>
 
-	<h3>The Site</h3>
-	<p>
-	You may notice, the site is quite "minimal", in that it's only text and basic styling. That's it. I may change
-	the colorscheme, but even then I do that with a script that takes a file with a list of colours, and outputs that
-	to the file <code>css/colors.css</code>.</p>
+            This site was written in purely HTML and CSS, because you really do not need to use JavaScript to make website. Even this background image, while it does have a slight tint to it, that is also just CSS:&nbsp; <code>background-blend-mode: overlay;</code><br><br>
 
-	<h3>Linux</h3>
-	<p>
-	I have been using GNU/Linux since 2012, but primarily since 2017, as I was previously using Windows 7, and then
-	Windows 10. I could see that Windows 10, even in 2017 with 1703, was going to get a lot more bloated, and a lot
-	more slower. And I was indeed correct. 
+            Other things that I am known for are being trans and asexual, using a Lenovo ThinkPad, and telling people that I run Arch Linux btw<br><br>
 
-	<p>
+            I have experience with both front and backend development, with my personal preference being backend, and I use my skillset to do tasks efficiently, quickly and logically. I have experience with multiple different operating systems, system administration tools and programming languages. I have experience with most Linux distributions, ie. Debian, Red Hat Enterprise Linux, RPM, etc.<br><br>
 
-	<h3>Blog</h3>
+            <big><i>Operating Systems</i></big> Linux (Deb/RHEL/RPM), Free/Open BSD, TrueNAS, macOS, Windows, Android/iOS<br>
 
-	<p>
-	<ul>
-		<li><i>March. 29th 2022</i> - <a href="blog.html#modern-laptops-are-terrible">Modern Laptops are Terrible</a></li>
-	</ul>
-	</p>
+            <big><i>System Administration</i></big> bhyve, QEMU/KVM, WSL, SSH, Git, rsync, fdisk, cron<br>
 
-	<h3>Donate</h3>
-	<p>
-	Donate with <img src="img/xmr.png" alt="XMR" title="Monero (XMR)"><br> 
-	42C1wj6LSaeESKSRojBoU1LZTjeHCTbCT2HWxb4QbLUC4rRnaWD3DpZ7d3rYESm3GnEMfZT3nDwx696p5DmpSGWPMGtYDnr</p>
-</body>
+            <big><i>Languages</i></big> C, C#, C++, Python (2 & 3), Java, JavaScript, Haskell, GNU Bash/zsh, HTML + CSS<br>
+
+            <big><i>Tools</i></big> NPM, IIS, pip, nginx, Apache 2, LAMP, PowerShell, Vi/Vim, Active Directory, UNIX System Tools</p>
+
+            <h2>Fonts</h2>
+            <p>
+                The main font used on this page is called "Linux Biolinum", and the monospaced font is <code>Inconsolata</code>, both of which are very nice fonts. The background image is from my <a href="https://gitlab.com/Kimitzuni/wallpapers">wallpapers</a> repository on GitLab, and the image is <a href="https://gitlab.com/Kimitzuni/wallpapers/-/blob/main/Night/1637700445388.jpg">"1637700445388.jpg"</a> (I didn't rename the file when I downloaded it, I'm sorry)
+            </p>
+
+            <h2>Donations</h2>
+            <p>
+                Donations, while not required but always appreciated, are welcome. I prefer to have donations in Monero (XMR), and you can send Monero to my XMR wallet: <br>
+                <code>42C1wj6LSaeESKSRojBoU1LZTjeHCTbCT2HWxb4QbLUC4rRnaWD3DpZ7d3rYESm3GnEMfZT3nDwx696p5DmpSGWPMGtYDnr</code>
+            </p>
+    </body>
 </html>
