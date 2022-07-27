@@ -1,68 +1,70 @@
 <!DOCTYPE html>
-<html lang="en-gb">
-    <head>
-        <title>Rebecca White's Site</title>
+<head>
+    <title>Rebecca White</title>
+    
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/colors.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
 
-        <link rel="stylesheet" href="base.css" />
-    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
 
-    <body>
-        <div class="topnav">
-            <a href="index.html" class="active">Home</a>
-            <a href="contact.html">Contact</a>
+</head>
 
-            <div class="dropdown">
-                <button class="dropbtn">Personal Links
-                  <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                  <a href="https://www.youtube.com/channel/UCw-KUmowVpeozuzdM1POLvA">YouTube</a>
-                  <a href="https://odysee.com/@rtiannew:7">Odysee</a>
-                  <a href="https://github.com/Kimitzuni">GitHub</a>
-                  <a href="https://gitlab.com/Kimitzuni">GitLab</a>
-                </div>
-              </div>
+<body>
+    <div class="container">
+        <div class="titleTop">
+            <h1>Rebecca White</h1>
+            <h3 class="subTitle">A Professionally Unprofessional Programmer</h3>
+        </div>
+        
+        <div class="navLinks" align="center">
+            <ul>
+                <li><a class="projectBtn" href="index.html">Home</a></li>
+                <li><a class="projectBtn" onclick="showProjects();">Projects</a></li>
+                <li><a class="projectBtn" onclick="showContact();">Contact</a></li>
+            </ul>
+        </div>
 
-
-            <div class="dropdown">
-              <button class="dropbtn">About
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="edu.html">Education</a>
-                <a href="work.html">Professional Experience</a>
-                <a href="hardware.html">Hardware</a>
-              </div>
+        <div id="projects">
+            <div class="closeBtn">
+                <p><button onclick="hideProjects();" class="btn">Close</button></p>
             </div>
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <img src="https://github.com/Kimitzuni/googledeathguesser/blob/master/assets/img/favicon.png?raw=true">
 
-          </div>
+                    Google Product Death Guesser ―
+                    <a class="projectBtn" href="https://kimitzuni.github.io/googledeathguesser">Play</a>  
+                    <a class="projectBtn" href="https://github.com/Kimitzuni/googledeathguesser">Source Code</a>
+                </li>
+                <br>
+                <li>
+                    <img class="liImg" src="assets/img/credman.png">
+                    credman - Java 'Credential' Manager ― 
+                    <a class="projectBtn" href="https://github.com/Kimitzuni/credman">Source Code</a>
+                </li>
+                <br>
 
-          <h1>Hello</h1>
-          <p>Hello there, my name is Rebecca and I am a software developer from Wales. I primarilly use Linux, specifically the <a href="https://archlinux.org">Arch Linux</a> distribution, with the <a href="https://dwm.suckless.org">Suckless DWM</a> window manager (my build can be found on <a href="https://github.com/Kimitzuni/dwm">GitHub</a>)<br><br>
+                <li>
+                    <img class="liImg" src="assets/img/shvmm.png">
+                    SHVMM - Shell Virtual Machine Manager ― 
+                    <a class="projectBtn" href="https://github.com/Kimitzuni/shvmm">Source Code</a>
+                </li>
+            </ul>
+        </div>
 
-            This site was written in purely HTML and CSS, because you really do not need to use JavaScript to make website. Even this background image, while it does have a slight tint to it, that is also just CSS:&nbsp; <code>background-blend-mode: overlay;</code><br><br>
-
-            Other things that I am known for are being trans and asexual, using a Lenovo ThinkPad, and telling people that I run Arch Linux btw<br><br>
-
-            I have experience with both front and backend development, with my personal preference being backend, and I use my skillset to do tasks efficiently, quickly and logically. I have experience with multiple different operating systems, system administration tools and programming languages. I have experience with most Linux distributions, ie. Debian, Red Hat Enterprise Linux, RPM, etc.<br><br>
-
-            <big><i>Operating Systems</i></big> Linux (Deb/RHEL/RPM), Free/Open BSD, TrueNAS, macOS, Windows, Android/iOS<br>
-
-            <big><i>System Administration</i></big> bhyve, QEMU/KVM, WSL, SSH, Git, rsync, fdisk, cron<br>
-
-            <big><i>Languages</i></big> C, C#, C++, Python (2 & 3), Java, JavaScript, Haskell, GNU Bash/zsh, HTML + CSS<br>
-
-            <big><i>Tools</i></big> NPM, IIS, pip, nginx, Apache 2, LAMP, PowerShell, Vi/Vim, Active Directory, UNIX System Tools</p>
-
-            <h2>Fonts</h2>
-            <p>
-                The main font used on this page is called "Linux Biolinum", and the monospaced font is <code>Inconsolata</code>, both of which are very nice fonts. The background image is from my <a href="https://gitlab.com/Kimitzuni/wallpapers">wallpapers</a> repository on GitLab, and the image is <a href="https://gitlab.com/Kimitzuni/wallpapers/-/blob/main/Night/1637700445388.jpg">"1637700445388.jpg"</a> (I didn't rename the file when I downloaded it, I'm sorry)
-            </p>
-
-            <h2>Donations</h2>
-            <p>
-                Donations, while not required but always appreciated, are welcome. I prefer to have donations in Monero (XMR), and you can send Monero to my XMR wallet: <br>
-                <code>42C1wj6LSaeESKSRojBoU1LZTjeHCTbCT2HWxb4QbLUC4rRnaWD3DpZ7d3rYESm3GnEMfZT3nDwx696p5DmpSGWPMGtYDnr</code>
-            </p>
-    </body>
-</html>
+        <div id="contact">
+            <div class="closeBtn">
+                <p><button onclick="hideContact();" class="btn">Close</button></p>
+            </div>
+            <h2>Contact &amp; Links</h2>
+            <ul class="contactList">
+                <li><a class="projectBtn" href="mailto:rwhitego@gmail.com">Email</a></li>
+                <li><a class="projectBtn" href="https://github.com/Kimitzuni">GitHub</a></li>
+                <li><a class="projectBtn" href="https://twitter.com/Kimitzuni">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+</body>

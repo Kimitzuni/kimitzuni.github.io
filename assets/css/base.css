@@ -1,0 +1,109 @@
+.container {
+    margin: auto;
+    margin-top: 20%;
+    margin-bottom: auto;
+    width: 750px;
+}
+
+.titleTop {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+a:hover {
+    padding-left: 3px;
+    color: #d8dee9;
+    padding-right: 3px;
+}
+
+ul, ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.subTitle {
+    font-style: italic;
+    margin-top: -60px;
+    font-size: 20px;
+}
+.navLinks .projectBtn {
+    font-size: 24px;
+}
+#projects, #contact {
+    top: 30%;
+    bottom: 40%;
+    background-color: var(--bg-opacity);
+    border: 1px solid var(--inverted);
+    padding: 15px;
+    padding-top: 0px;
+    position: fixed;
+    min-height: 200px;
+    height: auto;
+    max-width: 750px;
+    min-width: 750px;
+    width: auto;
+    border-radius: 0px 0px 8px 8px;
+    display: none;
+}
+
+#projects img {
+    vertical-align: -6px;
+}
+
+#projects ul li {
+    font-size: 18px;
+}
+
+.contactList {
+    display: inline;
+}
+
+.liImg {
+    padding-top: 15px;
+    width: 30px;
+    vertical-align: 5px;
+}
+
+.btn {
+    padding: 5px 5px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #d8dee9;
+    background-color: var(--rwhite-color-secondary-blue);
+    border: none;
+    cursor: pointer;
+    width: max-content;
+    margin-top: 2px;
+    position: absolute;
+    right: 10px;
+}
+
+.projectBtn {
+    font-size: 20px;
+    font-weight: 900;
+    color: #d8dee9;
+    background-color: var(--rwhite-color-secondary-blue);
+    border: none;
+    cursor: pointer;
+    width: max-content;
+    margin-top: 2px;
+    padding: 3px 3px;
+}
+
+.projectBtn:hover {
+    background-color: var(--rwhite-color-primary-blue);
+    color: #d8dee9;
+}
+
+.btn:hover {
+    background-color: var(--rwhite-color-primary-blue);
+    color: #d8dee9;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
