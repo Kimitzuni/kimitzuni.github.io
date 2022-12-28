@@ -1,70 +1,71 @@
 <!DOCTYPE html>
-<head>
-    <title>Rebecca White</title>
-    
-    <link rel="stylesheet" href="assets/css/fonts.css" />
-    <link rel="stylesheet" href="assets/css/colors.css" />
-    <link rel="stylesheet" href="assets/css/base.css" />
+<html lang="en">
+	<head>
+		<title>Rebecca White's Site</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="assets/js/script.js"></script>
+		<link rel="stylesheet" href="assets/css/base.css" />
+		<link rel="stylesheet" href="assets/css/fonts.css" />
+		<link rel="icon" type="image/png" href="assets/img/watermelon.png" />
+	</head>
 
-</head>
+	<body>
 
-<body>
-    <div class="container">
-        <div class="titleTop">
-            <h1>Rebecca White</h1>
-            <h3 class="subTitle">A Professionally Unprofessional Programmer</h3>
-        </div>
-        
-        <div class="navLinks" align="center">
-            <ul>
-                <li><a class="projectBtn" href="index.html">Home</a></li>
-                <li><a class="projectBtn" onclick="showProjects();">Projects</a></li>
-                <li><a class="projectBtn" onclick="showContact();">Contact</a></li>
-            </ul>
-        </div>
+		<div class="header">
+			<h1>Rebecca White</h1>
 
-        <div id="projects">
-            <div class="closeBtn">
-                <p><button onclick="hideProjects();" class="btn">Close</button></p>
-            </div>
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <img src="https://github.com/Kimitzuni/googledeathguesser/blob/master/assets/img/favicon.png?raw=true">
+			<div class="navbar">
+				<ul>
+					<li><a href="library.html"><img class="icon" src="assets/img/books.png" alt="" />Library</a></li>
+					<li><a href="articles/index.html"><img class="icon" src="assets/img/scroll.png" alt="" />Blog</a></li>
+					<li><a href="announcements/index.html"><img class="icon" src="assets/img/megaphone.png" alt="">Announcements</a></li>
+					<li><a href="music.html"><img class="icon" src="assets/img/music.png" alt="">Music</a></li>
+				</ul>
+			</div>
+		</div>
 
-                    Google Product Death Guesser ―
-                    <a class="projectBtn" href="https://kimitzuni.github.io/googledeathguesser">Play</a>  
-                    <a class="projectBtn" href="https://github.com/Kimitzuni/googledeathguesser">Source Code</a>
-                </li>
-                <br>
-                <li>
-                    <img class="liImg" src="assets/img/credman.png">
-                    credman - Java 'Credential' Manager ― 
-                    <a class="projectBtn" href="https://github.com/Kimitzuni/credman">Source Code</a>
-                </li>
-                <br>
+		<div class="body">
+			<h2>Introduction</h2>
+			<p>Hello there! I'm Rebecca White, and this is my zone of the internets. There will be more here in the future, so
+			   thanks for stopping by! I do have a blog on here, which you can subscribe to the
+			   <a href="rss.xml"><img src="assets/img/rss.png" class="icon" alt="" />RSS Feed</a>. Because RSS is the superior
+			   method of subscribing to things</p>
+			
+			<h2>Posts</h2>
+			<ul>
+				<li>
+					<b class="date">25 Dec. 2022</b> &mdash;
+					<a href="articles/2022_12_25-ubuntu_is_a_bad_distro.html">Ubuntu is a Bad Distribution</a>
+				</li>
 
-                <li>
-                    <img class="liImg" src="assets/img/shvmm.png">
-                    SHVMM - Shell Virtual Machine Manager ― 
-                    <a class="projectBtn" href="https://github.com/Kimitzuni/shvmm">Source Code</a>
-                </li>
-            </ul>
-        </div>
+				<br>
+				<li>
+					<i>See More <a href="articles/index.html"><img class="icon" src="assets/img/scroll.png" alt="">Blog Posts</a></i>
+				</li>
 
-        <div id="contact">
-            <div class="closeBtn">
-                <p><button onclick="hideContact();" class="btn">Close</button></p>
-            </div>
-            <h2>Contact &amp; Links</h2>
-            <ul class="contactList">
-                <li><a class="projectBtn" href="mailto:rwhitego@gmail.com">Email</a></li>
-                <li><a class="projectBtn" href="https://github.com/Kimitzuni">GitHub</a></li>
-                <li><a class="projectBtn" href="https://twitter.com/Kimitzuni">Twitter</a></li>
-            </ul>
-        </div>
-    </div>
-</body>
+				<li>
+					<i>See More <a href="announcements/index.html">
+					<img class="icon" src="assets/img/megaphone.png" alt="">Announcements</a></i>
+				</li>
+			</ul>
+
+			<h2>My Projects</h2>
+			<p>
+				<img src="assets/img/git.png" alt="" class="icon" />
+				<a href="https://github.com/Kimitzuni">GitHub</a> &mdash;
+				All my projects are stored on GitHub<br>
+
+				<img src="assets/img/bandcamp.png" alt="" class="icon" />
+				<a href="https://kimitzuni.bandcamp.com">Bandcamp</a> &mdash;
+				Musical Side Project
+			</p>
+
+			<h2>Donate</h2>
+			<p>
+			<img src="assets/img/xmr.png" class="icon" alt="Monero" />
+			<a href="assets/img/xmr-qr.png" />QR</a>&nbsp;
+			<code>47H6quZ14W4WwiAVLLGKqh5qBvbm3ehZaMaj5mA6KZLR1Q7qdNwm3twQHg5qPLbTEk7XPjHwmFCFbY4QN1p17gsZR7wLTJW</code>
+
+			</p>
+		</div>
+	</body>
+</html>
