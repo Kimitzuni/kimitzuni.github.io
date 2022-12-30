@@ -1,85 +1,99 @@
+:root {
+	--background-color: #1d1f21;
+	--foreground-color: #c5c8c6;
+
+	--color0: #282a2e;
+	--color1: #a54242;
+	--color2: #8c9440;
+	--color3: #de935f;
+	--color4: #5f819d;
+	--color5: #85678f;
+	--color6: #5e8d87;
+	--color7: #707880;
+
+	--color8: #373b41;
+	--color9: #cc6666;
+	--color10: #b5bd68;
+	--color11: #f0c674;
+	--color12: #81a2be;
+	--color13: #b294bb;
+	--color14: #8abeb7;
+	--color15: #c5c8c6;
+}
+
 body {
-	background-color: #282828;
-	color: #ebdbb2;
-	max-width: 50em;
+	background-color: var(--background-color);
+	color: var(--foreground-color);
+	max-width: 80em;
 	margin: 0 auto;
 }
 
-h1 {
-	color: #b16286;
-}
-
-h2 {
-	color: #d3869b;
-}
-
-h3 {
-	color: #d65d0e;
-}
-
-h4 {
-	color: #fe8019;
-}
-
-.date {
-	font-weight: normal;
-	color: #928374;
-}
-
 a:link, a:visited {
-	color: #b16286;
+	color: var(--color3);
 	text-decoration: none;
 }
 
 a:hover {
+	color: var(--color3);
 	text-decoration: underline;
+	text-shadow: 0em 0.1em 0.35em var(--color3);
 }
 
-.header {
-	padding-bottom: 10px;
-	border-bottom: 1px solid #665c54;
+.body-content {
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
-.navbar {
-	margin-top: -15px;
+.title-navbar {
+	margin-top: -20px;
+	border-bottom: 2px solid var(--color8);
+	padding-bottom: 5px;
 }
 
-.navbar ul, .navbar ul li, .navbar li {
+.title-navbar ul, .title-navbar ul li, .title-navbar li {
+	display: inline;
 	list-style-type: none;
 	padding: 0;
-	padding-right: 10px;
-	display: inline;
+	padding-right: 20px;
+	padding-bottom: 5px;
 }
 
-.icon {
-	width: 20px;
-	vertical-align: -5px;
-	padding-right: 5px;
+.footer {
+	border-top: 2px solid var(--color8);
 }
 
-.blog-title h2 {
-	margin-top: -19px;
-	font-size: 18px;
+.date {
+	font-weight: normal;
 	font-style: italic;
-	color: #928374;
 }
 
-.toc {
+.blog-toc {
 	max-width: 480px;
 	padding-bottom: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
 	float: left;
 	margin-right: 15px;
-	border-right: 1px solid #665c54;	
-	border-top: 1px solid #665c54;	
-	border-bottom: 1px solid #665c54;	
+	border-right: 1px solid var(--color8);
+	border-top: 1px solid var(--color8);
+	border-bottom: 1px solid var(--color8);
 }
 
-.toc h2 {
-	margin-bottom: -15px;
+.watermelon {
+	max-width: 480px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	float: right;
+	margin-left: 15px;
+	margin-top: -15px;
 }
 
-.discography img {
-	width: 250px;
+.blog-date {
+	margin-top: -15px;
+	font-style: italic;
+}
+
+.card-title p {
+	margin-top: -15px;
 }

@@ -3,69 +3,112 @@
 	<head>
 		<title>Rebecca White's Site</title>
 
-		<link rel="stylesheet" href="assets/css/base.css" />
 		<link rel="stylesheet" href="assets/css/fonts.css" />
+		<link rel="stylesheet" href="assets/css/base.css" />
 		<link rel="icon" type="image/png" href="assets/img/watermelon.png" />
 	</head>
 
 	<body>
+		<div class="body-content">
+			<div class="title-header">
+				<h1>Rebecca White</h1>
+			</div>
 
-		<div class="header">
-			<h1>Rebecca White</h1>
-
-			<div class="navbar">
+			<div class="title-navbar">
 				<ul>
-					<li><a href="library.html"><img class="icon" src="assets/img/books.png" alt="" />Library</a></li>
-					<li><a href="articles/index.html"><img class="icon" src="assets/img/scroll.png" alt="" />Blog</a></li>
-					<li><a href="announcements/index.html"><img class="icon" src="assets/img/megaphone.png" alt="">Announcements</a></li>
-					<li><a href="music.html"><img class="icon" src="assets/img/music.png" alt="">Music</a></li>
+					<li><a href="blog/index.html">Blog</a></li>
+					<li><a href="social.html">Socials</a></li>
+					<li><a href="software.html">Software</a></li>
+					<li><a href="rss.xml">RSS</a></li>
 				</ul>
 			</div>
-		</div>
 
-		<div class="body">
 			<h2>Introduction</h2>
-			<p>Hello there! I'm Rebecca White, and this is my zone of the internets. There will be more here in the future, so
-			   thanks for stopping by! I do have a blog on here, which you can subscribe to the
-			   <a href="rss.xml"><img src="assets/img/rss.png" class="icon" alt="" />RSS Feed</a>. Because RSS is the superior
-			   method of subscribing to things</p>
-			
-			<h2>Posts</h2>
+
+			<div class="watermelon">
+				<img src="assets/img/watermelon.png" /><br>
+				<i>le watermelone</i>
+			</div>
+
+			<p><i title="General Kenobi">Hello there!</i> I am Rebecca White, and I am a software developer
+			from the United Kingdom, and I have been using Linux since around 2012. I am also a self-taught
+			software developer, and I started with the BBC BASIC Programming Language on the BBC Microcomputer
+			(Model B), and now I own 3 of these computers. Because I'm cool like that. I also own a ZX Spectrum
+			because I'm cool like that. This site serves as my own little playground, and you'll notice that it's
+			very simple, very minimal. This is my own choice, because you <b>don't</b> need JavaScript or ads to
+			have a site that works.
+			</p>
+
+			<h2>Recent Blog Updates</h2>
 			<ul>
-				<li>
-					<b class="date">25 Dec. 2022</b> &mdash;
-					<a href="articles/2022_12_25-ubuntu_is_a_bad_distro.html">Ubuntu is a Bad Distribution</a>
-				</li>
-
-				<br>
-				<li>
-					<i>See More <a href="articles/index.html"><img class="icon" src="assets/img/scroll.png" alt="">Blog Posts</a></i>
-				</li>
-
-				<li>
-					<i>See More <a href="announcements/index.html">
-					<img class="icon" src="assets/img/megaphone.png" alt="">Announcements</a></i>
+				<li><b class="date">25th December 2022</b> &mdash;
+					<a href="blog/2022/25_12_ubuntu_is_a_bad_distro.html">Ubuntu Is a Bad Distribution</a>
 				</li>
 			</ul>
 
-			<h2>My Projects</h2>
-			<p>
-				<img src="assets/img/git.png" alt="" class="icon" />
-				<a href="https://github.com/Kimitzuni">GitHub</a> &mdash;
-				All my projects are stored on GitHub<br>
+			<h2>Workflow</h2>
+			<p>My workflow is mostly in the terminal, with programs such as Vim (well actually NeoVIM), mutt,
+			<i>git</i> and other general terminal programs. I search through code with the <i>vgrep</i> program,
+			which is a much better alternative to <i>grep</i>, and I highly recommend it. I have 3 laptops, because
+			I like to make things overly awkward I guess. These laptops are:<br>
 
-				<img src="assets/img/bandcamp.png" alt="" class="icon" />
-				<a href="https://kimitzuni.bandcamp.com">Bandcamp</a> &mdash;
-				Musical Side Project
+			<ul>
+				<li>
+					Lenovo ThinkPad T460s w/ 128GB NVMe, 8GB RAM, Intel i5-6200U
+					(<a href="https://www.lenovo.com/gb/en/p/laptops/thinkpad/thinkpadt/thinkpad-t460s/22tp2tt460s">View on Lenovo's Site</a>)
+				</li>
+
+				<li>
+					Lenovo ThinkPad X230 w/ 320GB SSD, 12GB RAM, Intel i5-3200U
+					(<a href="https://www.lenovo.com/lt/lt/laptops/thinkpad/x-series/x230/">View on Lenovo's Site</a>)
+				</li>
+
+				<li>
+					HP Pavilion 15s-eq2510sa w/ 512GB NVMe, 8GB RAM, AMD Ryzen 7 5700U
+					(<a href="https://www.hp.com/ie-en/products/laptops/product-details/2100856150">View on Hewlett Packard's Site</a>)
+				</li>
+			</ul>
+
+			Let's start with the T460S. On this I run openSUSE Tumbleweed with the XFCE desktop environment. The desktop environment is just my personal
+			preference over the other environments Tumbleweed provides (GNOME and KDE Plasma). The reason for using openSUSE is simply because that's what
+			happened to be written on my USB at the time I decided to reinstall Linux.<br><br>
+
+			The X230 has Arch Linux, with the i3 Window Manager and a kind of "minimalist" setup, ie. that it's mostly terminal operated. However I haven't
+			updated that system in a while, so it probably is quite outdated, just the nature of running rolling release distributions.<br><br>
+
+			And finally is the HP Pavilion, which is also running the same as the T460S, but with some differences, mainly this has disk encryption, and
+			because I have the space to do this on this machine - a separate <code>/home</code> partition, which is roughly 480GB.<br><br>
+
+			My main machine is built from random hardware that I had, and is mostly focused on storage space and quietness. It has 16GB of DDR4 RAM, and Intel
+			Core i5-9400F, NVIDIA GeForce GTX 1650 from MSI, a Corsair CX550F RGB PSU, and the motherboard is "MS-7C09" according to <code>neofetch</code>,
+			but a readable name for it is the MSI H310M PRO-VDH Plus. In terms of storage, the main boot drive is a 240GB Maxtor Z1 SSD, and for extra
+			storage there is a 4TB Seagate BarraCuda drive that I've had for about 3 years, and only recently managed to fill 300GB up. This machine also runs
+			openSUSE Tumbleweed with XFCE and has disk encryption.<br><br>
+
+			As for web browsers, because people like to know, I can use any web browser, but my preference is Mozilla Firefox, with (obviously) the extension
+			<a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a>. Because you would be absolutely insane to not use 
+			uBlock<br><br>
+
+			My configuration files are currently not public, however I am working on making them public by removing all things I don't want people to have,
+			such as my <code>neomutt</code> configuration having my real email address, SMTP URL etc. When they are ready, they will be uploaded to my
+			<a href="https://github.com/Kimitzuni">GitHub</a>.
 			</p>
 
-			<h2>Donate</h2>
-			<p>
-			<img src="assets/img/xmr.png" class="icon" alt="Monero" />
-			<a href="assets/img/xmr-qr.png" />QR</a>&nbsp;
-			<code>47H6quZ14W4WwiAVLLGKqh5qBvbm3ehZaMaj5mA6KZLR1Q7qdNwm3twQHg5qPLbTEk7XPjHwmFCFbY4QN1p17gsZR7wLTJW</code>
+			<h2>Misc Links</h2>
+			<p>Here are some other miscellaneous links that you may be interested in</p>
+			<ul>
+				<li><a href="https://github.com/Kimitzuni">GitHub</a></li>
+				<li><a href="https://gitlab.com/Kimitzuni">GitLab</a></li>
+				<li><a href="https://kimitzuni.bandcamp.com">Bandcamp</a></li>
+				<li><a href="mailto:rtw@null.net">Email Me</a></li>
+			</ul>
 
-			</p>
+			<div class="footer">
+				<p>
+				&copy; 2022, 2023 Rebecca White <code>&lt;<a href="mailto:rtw@null.net">rtw@null.net</a>&gt;</code>
+				This site is licensed under the CC BY-NC-ND License.
+				</p>
+			</div>
 		</div>
 	</body>
 </html>
