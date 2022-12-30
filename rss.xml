@@ -1,0 +1,61 @@
+<rss version="2.0">
+	<channel>
+		<title>Rebecca White's Blog</title>
+		<link>https://kimitzuni.github.io/blog/</link>
+		<description>Blog Updates</description>
+		<language>en-gb</language>
+
+		<item>
+			<title>Ubuntu Is a Bad Distribution</title>
+			<link>https://kimitzuni.github.io/blog/2022/25_12_ubuntu_is_a_bad_distro</link>
+			<pubDate>Sun, 25 Dec 2022 10:45:00 -0000</pubDate>
+			<guid>https://kimitzuni.github.io/blog/2022/25_12_ubuntu_is_a_bad_distro</guid>
+			<description>
+				<![CDATA[
+			<p>Ubuntu is seen as a "noob-friendly" distribution, and it does most of the "hard work"
+			that is typically associated with better distributions; such as Arch or Gentoo. But
+			while it does this work, it does a lot of other things. Badly.</p>
+
+			<h2>Snap and Apt</h2>
+			<p>Canonical, the company behind Ubuntu, has made their own "package manager" called Snap, and rather than making things easier, it makes everything much more annoying.
+				While Canonical wants you to use Snap; Apt, the traditional Debian package management system, is still included. And to make things that bit more awkward - Apt and
+				Snap are completely incompatibile with each other, and Snap packages take priority over Apt. Let's say you wanted to install Firefox on Ubuntu, you would do
+				sudo apt-get install firefox, but no you wouldn't! Because that will install the Snap package instead. To install Firefox from apt, you would need to add the
+				Mozilla Team's apt PPA (Personal Package Archive), remove Snap, and tell apt to prioritize the PPA over Snap Packages. There is no reason to do this. It is flawed.
+			</p>
+			
+			<h2>Ubuntu's Painful Slowness</h2>
+			<p>One of the things that I hate about Ubuntu is its painful slowness. Even with NVIDIA's proprietary driver. Unless you strip out Snap, it is unbearable slow. Let's say you wanted
+				to play a game, let's say Valve's Half-Life 2 - a great game and highly recommend that you play it if you haven't done so, but just not on Ubuntu. Because if you try on
+				Ubuntu, you will experience it in the worst possible way - Laggy and overall a bad experience. And consider this: Half-Life 2 isn't a game that has high system requirements.
+				It is from 2004 - the Windows XP Era. However, on Arch Linux - it runs perfectly. Even in the GNOME Desktop Environment. Same hardware, and roughly the same software.
+				You can view the system requirements on the <a href="https://store.steampowered.com/app/220/HalfLife_2/">Half-Life 2 Steam Page</a>.
+			</p>
+
+			<h2>Why Use Ubuntu?</h2>
+			<p>If Ubuntu is so bad... why do people use it? As mentioned, Ubuntu is seen as a "noob-friendly" distribution, and people who are new to using Linux, will typically go for Ubuntu,
+				as it does everything for them. Ubuntu also has a server version, which is for use on... well, servers. And it doesn't include a GUI, but if you wanted a server distribution,
+				you could use Debian, or even Arch.
+			</p>
+
+			<h2>Ubuntu Alternatives</h2>
+			<p>If you are wanting a "just-works" distribution, but don't want Ubuntu, consider the following;</p>
+
+			<h3>Arch Based</h3>
+			<ul>
+				<li><a href="https://artixlinux.org/">Artix Linux</a></li>
+				<li><a href="https://manjaro.org/">Manjaro Linux</a></li>
+				<li><a href="https://arcolinux.com/">Arco Linux</a></li>
+				<li><a href="https://endeavouros.com/">EndeavourOS</a></li>
+			</ul>
+
+			<h3>Debian Based</h3>
+			<ul>
+				<li><a href="https://debian.org">Debian GNU/Linux</a></li>
+				<li><a href="https://www.bunsenlabs.org/">Bunsenlabs Linux</a></li>
+			</ul>
+			]]>
+			</description>
+		</item>
+	</channel>
+</rss>
