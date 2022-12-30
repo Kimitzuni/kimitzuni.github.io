@@ -1,44 +1,67 @@
-<rss version="2.0">
-	<channel>
-		<title>Rebecca White's Blog</title>
-		<link>https://kimitzuni.github.io/blog/</link>
-		<description>Blog Updates</description>
-		<language>en-gb</language>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Rebecca White's Site</title>
 
-		<item>
-			<title>Make Better Output Logs</title>
-			<link>https://kimitzuni.github.io/blog/2022/30_12_make_better_output_logs</link>
-			<pubDate>Fri, 30 Dec 2022 17:59:00 -0000</pubDate>
-			<guid>https://kimitzuni.github.io/blog/2022/30_12_make_better_output_logs</guid>
-			<description>
-				<![CDATA[
+		<link rel="stylesheet" href="../../assets/css/fonts.css" />
+		<link rel="stylesheet" href="../../assets/css/base.css" />
+		<link rel="icon" type="image/png" href="../../assets/img/watermelon.png" />
+	</head>
+
+	<body>
+		<div class="body-content">
+			<div class="title-header">
+				<h1>Rebecca White</h1>
+			</div>
+
+			<div class="title-navbar">
+				<ul>
+					<li><a href="../index.html">Blog Home</a></li>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../../social.html">Socials</a></li>
+					<li><a href="../../software.html">Software</a></li>
+					<li><a href="../../rss.xml">RSS</a></li>
+				</ul>
+			</div>
+
+			<h2>Make Better Output Logs</h2>
+			<h3 class="blog-date">Friday, 30th December 2022</h3>
+
 			<p>The fact that most programs on Linux don't have an output log that actually tells you what goes wrong
 			is very frustrating. It would help a lot of people to just have an extra bit of the output tell you what
-				went wrong. This is also more of a rant about Steam on Linux, more than anything else.</p>
+			went wrong. This is also more of a rant about Steam on Linux, more than anything else.</p>
 
+			<div class="blog-toc">
+				<h2>Table of Contents</h2>
+				<ul>
+					<li><a href="#valve-pls-fix">Valve, Pls Fix</a></li>
+					<ul>
+						<li><a href="#a-note-about-steamcmd">A Note about <i>steamcmd</i></a></li>
+					</ul>
+					<li><a href="#suggestions">Suggestions</a></li>
+				</ul>
+			</div>
+			<hr>
 
 			<h2 id="valve-pls-fix">Valve, Pls Fix</h2>
 			<p>My frustration of this was recently heightened by Valve, and mostly with Steam. While I am a software developer, I do like to play games, recently I've
 			been playing through the Half-Life 2 series, and I'm currently on <a href="https://store.steampowered.com/app/420/HalfLife_2_Episode_Two/">HL2 - Episode 2</a>,
-				and I wanted to continue that. So, I installed opened Steam... and nothing. I thought, lets try it through the terminal. So that's what I did</p>
+			and I wanted to continue that. So, I installed opened Steam... and nothing. I thought, lets try it through the terminal. So that's what I did
 
 			<pre>
-
 ~ $ steam
 Couldn't import apt, please install python3-apt or update steamdeps for your distribution.
 steam.sh[727]: Running Steam on opensuse-tumbleweed 20221229 64-bit
 steam.sh[727]: STEAM_RUNTIME is enabled automatically
 setup.sh[809]: Steam runtime environment up-to-date!
 steam.sh[727]: Steam client's requirements are satisfied
-			</pre>
+</pre>
 
-			<p>
 			And still nothing. No log file that told me what went wrong, and just by looking at this output, you'd think it worked, because it didn't have any obvious
 			failures. But Steam still didn't open. So I now had to debug a program that should've been debugged by the multi-billion dollar comapny. So I ran <code>strace</code>
-				on Steam.</p>
+			on Steam.
 
 			<pre>
-
 ~ $ strace steam
 execve("/usr/bin/steam", ["steam"], 0x7ffc209ad230 /* 91 vars */) = 0
 brk(NULL)                               = 0x55d566470000
@@ -69,18 +92,14 @@ openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=78295, ...}, AT_EMPTY_PATH) = 0
 mmap(NULL, 78295, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f14fa04e000
 close(3)
-
 			</pre>
-			<br>
 			
 			And oh dear. That's quite a lot of libraries that just aren't found. Bare in mind that I had managed to open Steam previously, to install the games. But after a 
 			restart... It broke. Without telling me why or how. I decided to delete all trace of Steam from my home directory, and reinstall Steam. Steam did start working,
 			and on multiple closing and reopenings of it. But this was before I logged in. Though during its update thing, I did load Steam from the <code>$HOME/.steam</code>
 			binary, and that decided it would crash.
 
-			<br>
-				<pre>
-
+			<pre>
 (steam:6469): GLib-GObject-CRITICAL **: 15:00:25.179: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
 crash_20221230150025_25.dmp[6954]: Uploading dump (out-of-process)
 /tmp/dumps/crash_20221230150025_25.dmp
@@ -88,92 +107,73 @@ crash_20221230150025_25.dmp[6954]: Uploading dump (out-of-process)
 ~ $ crash_20221230150025_25.dmp[6954]: Finished uploading minidump (out-of-process): success = yes
 crash_20221230150025_25.dmp[6954]: response: CrashID=bp-526424d3-c755-4318-b5a3-413942221230
 crash_20221230150025_25.dmp[6954]: file ''/tmp/dumps/crash_20221230150025_25.dmp'', upload yes: ''CrashID=bp-526424d3-c755-4318-b5a3-413942221230''
+</pre>
+			I just thought that was kind of funny. But the library did infact load</p>
 
-			</pre>
-			<br>
+			<div class="blog-img-content">
+				<div class="blog-img">
+					<a href="../../assets/blogimg/2022_30_12_better_output_logs_steamlibrary.png" />
+						<img src="../../assets/blogimg/2022_30_12_better_output_logs_steamlibrary.png" />
+					</a>
+				</div>
+				
+				<div class="blog-img-caption">
+					<i>Steam Library - After Many Attempts</i>
+				</div>
+			</div>
 
-	I just thought that was kind of funny. But the library did infact load (<a href="https://kimitzuni.github.io/assets/blogimg/2022_30_12_better_output_logs_steamlibrary.png">View Image</a>)</p>
+			<p>So, I downloaded Half-Life 2 - Episode 2, and it loaded. This is good progress.</p>
 
-	<p>So I downloaded Half-Life 2 - Episode 2 and it loaded. This is good progress. (<a href="https://kimitzuni.github.io/blogimg/2022_30_12_better_output_logs_hl2e2.png">View Image</a>)</p>
+			<div class="blog-img-content">
+				<div class="blog-img">
+					<a href="../../assets/blogimg/2022_30_12_better_output_logs_hl2e2.png">
+						<img src="../../assets/blogimg/2022_30_12_better_output_logs_hl2e2.png" />
+					</a>
+				</div>
 
-	<p>But will Steam still load when I restart it? There's only one way to find out. (Side note - I'm also doing this <i>as</i> I write this.) And it did indeed load. However,
-		there is still one more test. Will it load after a full restart? And the answer is... Actually yes
-	(<a href="https://kimitzuni.github.io/assets/blogimg/2022_30_12_better_output_logs_post_restart.png">View Image</a></p>
+				<div class="blog-img-caption">
+					<i>H λ L F - L I F E <sup>2</sup> &mdash; E P I S O D E  2 Title Screen</i>
+				</div>
+			</div>
 
-		<h3 id="a-note-about-steamcmd">A Note about <i>steamcmd</i></h3>
+			<p>But will Steam still load when I restart it? There's only one way to find out. (Side note - I'm also doing this <i>as</i> I write this.) And it did indeed load. However,
+			there is still one more test. Will it load after a full restart? And the answer is... Actually yes</p>
+
+			<div class="blog-img-content">
+				<div class="blog-img">
+					<a href="../../assets/blogimg/2022_30_12_better_output_logs_post_restart.png">
+						<img src="../../assets/blogimg/2022_30_12_better_output_logs_post_restart.png" />
+					</a>
+				</div>
+
+				<div class="blog-img-caption">
+					<i>Steam actually working post-restart</i>
+				</div>
+			</div>
+
+			<h3 id="a-note-about-steamcmd">A Note about <i>steamcmd</i></h3>
 			<p>One thing that I do like is a command line only version of programs, and Steam does have this with <i>steamcmd</i>, though that was just out of the question.
-				It didn't even work. At all.
-			<br>
-				<pre>
-
+			It didn't even work. At all.
+			<pre>
 ~ $ steamcmd
 .......
 [ 97%] Downloading update (56,907 of 57,385 KB)...
 [ 99%] Downloading update (57,385 of 57,385 KB)...
 [100%] Download Complete.
 [100%] !!! Fatal Error: Download of package (steamcmd_public_all) failed after 0 bytes (0).
-
-			</pre><br></p>
+			</pre></p>
 
 			<h2 id="suggestions">Suggestions</h2>
 			<p>If you want to make the users of your programs avoid headaches like this, and make it so they don't have to use <code>strace</code> to figure out what is going
 			on and why the program just won't work. Add a <code>--debug</code> type flag to your program, that gives just that little bit of extra information. And if you 
-				really want to help your users. Make a log file somewhere common.</p>
-				]]>
-		</description>
-		</item>
+			really want to help your users. Make a log file somewhere common.</p>
 
-		<item>
-			<title>Ubuntu Is a Bad Distribution</title>
-			<link>https://kimitzuni.github.io/blog/2022/25_12_ubuntu_is_a_bad_distro</link>
-			<pubDate>Sun, 25 Dec 2022 10:45:00 -0000</pubDate>
-			<guid>https://kimitzuni.github.io/blog/2022/25_12_ubuntu_is_a_bad_distro</guid>
-			<description>
-				<![CDATA[
-			<p>Ubuntu is seen as a "noob-friendly" distribution, and it does most of the "hard work"
-			that is typically associated with better distributions; such as Arch or Gentoo. But
-			while it does this work, it does a lot of other things. Badly.</p>
-
-			<h2>Snap and Apt</h2>
-			<p>Canonical, the company behind Ubuntu, has made their own "package manager" called Snap, and rather than making things easier, it makes everything much more annoying.
-				While Canonical wants you to use Snap; Apt, the traditional Debian package management system, is still included. And to make things that bit more awkward - Apt and
-				Snap are completely incompatibile with each other, and Snap packages take priority over Apt. Let's say you wanted to install Firefox on Ubuntu, you would do
-				sudo apt-get install firefox, but no you wouldn't! Because that will install the Snap package instead. To install Firefox from apt, you would need to add the
-				Mozilla Team's apt PPA (Personal Package Archive), remove Snap, and tell apt to prioritize the PPA over Snap Packages. There is no reason to do this. It is flawed.
-			</p>
-			
-			<h2>Ubuntu's Painful Slowness</h2>
-			<p>One of the things that I hate about Ubuntu is its painful slowness. Even with NVIDIA's proprietary driver. Unless you strip out Snap, it is unbearable slow. Let's say you wanted
-				to play a game, let's say Valve's Half-Life 2 - a great game and highly recommend that you play it if you haven't done so, but just not on Ubuntu. Because if you try on
-				Ubuntu, you will experience it in the worst possible way - Laggy and overall a bad experience. And consider this: Half-Life 2 isn't a game that has high system requirements.
-				It is from 2004 - the Windows XP Era. However, on Arch Linux - it runs perfectly. Even in the GNOME Desktop Environment. Same hardware, and roughly the same software.
-				You can view the system requirements on the <a href="https://store.steampowered.com/app/220/HalfLife_2/">Half-Life 2 Steam Page</a>.
-			</p>
-
-			<h2>Why Use Ubuntu?</h2>
-			<p>If Ubuntu is so bad... why do people use it? As mentioned, Ubuntu is seen as a "noob-friendly" distribution, and people who are new to using Linux, will typically go for Ubuntu,
-				as it does everything for them. Ubuntu also has a server version, which is for use on... well, servers. And it doesn't include a GUI, but if you wanted a server distribution,
-				you could use Debian, or even Arch.
-			</p>
-
-			<h2>Ubuntu Alternatives</h2>
-			<p>If you are wanting a "just-works" distribution, but don't want Ubuntu, consider the following;</p>
-
-			<h3>Arch Based</h3>
-			<ul>
-				<li><a href="https://artixlinux.org/">Artix Linux</a></li>
-				<li><a href="https://manjaro.org/">Manjaro Linux</a></li>
-				<li><a href="https://arcolinux.com/">Arco Linux</a></li>
-				<li><a href="https://endeavouros.com/">EndeavourOS</a></li>
-			</ul>
-
-			<h3>Debian Based</h3>
-			<ul>
-				<li><a href="https://debian.org">Debian GNU/Linux</a></li>
-				<li><a href="https://www.bunsenlabs.org/">Bunsenlabs Linux</a></li>
-			</ul>
-			]]>
-			</description>
-		</item>
-	</channel>
-</rss>
+			<div class="footer">
+				<p>
+				&copy; 2022, 2023 Rebecca White <code>&lt;<a href="mailto:rtw@null.net">rtw@null.net</a>&gt;</code>
+				This site is licensed under the CC BY-NC-ND License.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

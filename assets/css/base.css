@@ -97,3 +97,14 @@ a:hover {
 .card-title p {
 	margin-top: -15px;
 }
+
+.blog-img img {
+	max-width: 1024px;
+	width: auto;
+	display: block;
+	margin: auto;
+}
+
+.blog-img-caption {
+	text-align: center;
+}
