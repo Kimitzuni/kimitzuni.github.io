@@ -99,12 +99,16 @@ a:hover {
 }
 
 .blog-img img {
-	max-width: 1024px;
-	width: auto;
+	width: 85%;
 	display: block;
 	margin: auto;
 }
 
 .blog-img-caption {
 	text-align: center;
+}
+
+pre {
+	width: auto;
+	white-space: pre-wrap;
 }
