@@ -2,49 +2,106 @@
 <html lang="en">
 	<head>
 		<title>Rebecca White</title>
-
-		<link rel="stylesheet" href="assets/css/fonts.css" />
 		<link rel="stylesheet" href="assets/css/base.css" />
-		<link rel="icon" type="image/png" href="assets/img/watermelon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="author" content="Rebecca White" />
-		<meta name="description" content="Hi! This is my site!" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body>
-		<div class="content">
-			<h1>Rebecca White's Personal Site</h1>
-			<p>Hi! Welcome to my personal site. Here you can find various links to other pages and sites you
-			can find me on.</p>
+		<div class="panel">
+			<div class="title">
+				<h1>Rebecca White</h1>
+				<h2 class="subtitle">Completely Unprofessional</h2>
+				<p class="links">
+				<a href="https://twitter.com/Kimitzuni"></a> 
+				<a href="https://tech.lgbt/@Kimitzuni"></a> 
+				<a href="https://youtube.com/@rtiannew"></a> 
+				<a href="https://github.com/Kimitzuni"></a> 
+				<a href="https://gitlab.com/Kimitzuni"></a> 
+				<a href="mailto:rwhite.press@gmail.com"></a>
+				</p>
+			</div>
+			
+			<div id="introduction">
+				<h2>Introduction</h2>
+				<p>
+				Hi. I'm Rebecca, and I'm a software developer from England, and have been using desktop Linux for over
+				10 years. I have experience with a good chunk of programming languages, with my personal favourite language
+				being C. I'm currently a student at St Helens College, on the BTEC IT Level 2 course, and providing technical
+				support for Linux users at the college, while such a niche thing to do - it is still a thing that I do. Alongside
+				that I am also a software collector, both games and just general software, and a hardware collector. Currently I 
+				own 3 BBC Microcomputer Model B's, a Sinclair ZX Spectrum, a ThinkPad X230, T460S, T60 and have given an IBM ThinkPad
+				701C to IBM London. Whether or not they still have it is a different question.
+			</div>
 
-			<h2>Find Me On</h2>
-			<ul>
-				<li><a href="https://tech.lgbt/@kimitzuni" rel="me">Mastodon - @kimitzuni@tech.lgbt</a></li>
-				<li><a href="https://twitter.com/Kimitzuni">Twitter - @Kimitzuni</a> (Inactive)</li>
-				<li><a href="https://odysee.com/@rtiannew">Odysee - @rtiannew:e</a></li>
-				<li><a href="https://youtube.com/@rtiannew">YouTube - @rtiannew</a></li>
-				<li><a href="mailto:rwhitedev4@gmail.com">Email - rwhitedev4@gmail.com</a></li>
-			</ul>
+			<div id="contact">
+				<h2>Contact</h2>
+				<p>
+				The best way to get into contact with me, if you choose to for some strange reason, is via email. And that email address
+				would be <code>&lt;<a href="mailto:rwhite.press@gmail.com">rwhite.press@gmail.com</a>&gt;</code>. Just do not expect a
+				response for everything, as there may be a chance I won't see it. I am subscribed to the LKML and several Debian Mailing
+				Lists. My inbox is several thousand messages.
+				</p>
+			</div>
 
-			<h2>Projects</h2>
-			<ul class="project-list">
-				<li>
-					<a href="https://github.com/Kimitzuni/win16-transflag">win16-transflag</a><br>
-					A Trans Flag written in C for Win16
-				</li>
-			</ul>
+			<div id="projects">
+				<h2>Projects</h2>
+				
+				<table>
+				<tr>
+					<td>
+						<a class="git" href="https://github.com/kimitzuni/kernel-roulette">kernel-roulette</a><br> 
+						<a class="license" href="https://gnu.org/licenses/gpl-2.0.html">GNU GPL v2</a>
+					</td>
 
-			<h2>Sub-Pages</h2>
-			<ul>
-				<li><a href="cv.html">Curriculum Vitae / Resume</a></li>
-				<li><a href="collection.html">Collection</a></li>
-			</ul>
+					<td class="entry-contents">
+						A Linux Kernel Module (v6.1.7) that forces you to play Russian Roulette
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="git" href="https://github.com/kimitzuni/win16-transflag">win16-transflag</a><br>
+						<a class="license" href="https://gnu.org/licenses/gpl-2.0.html">GNU GPL v2</a>
+					</td>
+
+					<td class="entry-contents">
+						A Trans Flag in C for Windows 3.1
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="git" href="https://github.com/kimitzuni/googledeathguesser">googledeathguesser</a>
+						<br>
+						<a class="license" href="https://gnu.org/licenses/gpl-2.0.html">GNU GPL v2</a> | 
+						<a class="play" href="https://kimitzuni.me/googledeathguesser">Play</a>
+					</td>
+
+					<td class="entry-contents">
+						A JavaScript web game in which you guess when Google killed or will kill a Google Product,
+						as they have a history of just killing products rather than maintaining them.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="git" href="https://gitlab.com/kimitzuni/wallpapers">wallpapers</a>
+						<br>
+						<a class="license" href="">None</a>
+					</td>
+
+					<td class="entry-contents">
+						Just my wallpapers
+					</td>
+				</tr>
+				</table>
+			</div>
+
+			<div class="hr"></div>
 
 			<div class="footer">
 				<p>
-				Copyright © 2023 Rebecca White <code>&lt;<a href="mailto:rwhitedev4@gmail.com">rwhitedev4@gmail.com</a>&gt;</code><br>
-				The content on this site is licensed under the
-				<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> license.
+				Copyright (c) 2023, Rebecca White.<br>
+				The content on this site, unless stated otherwise, is licensed under the
+				<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Creative Commons CC BY-NC-ND 4.0</a> license.
 				</p>
 			</div>
 		</div>
