@@ -1,102 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('/assets/css/colors.css');
+@import url('/assets/css/fonts.css');
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background-color: #1e242f;
-		--panel-color: #0D101766;
-		--foreground-color: #cbccc8;
-		--shadow-color: #cbccc866;
-		--link-color: #d5445b;
-	}
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans";
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		--background-color: #d8dee9;
-		--panel-color: #c6c7c866;
-		--foreground-color: #1e242f;
-		--shadow-color: #1e242f66;
-		--link-color: #d5445b;
-	}
+html,body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
 }
 
 body {
-	background-color: var(--background-color);
-	color: var(--foreground-color);
-	font-family: 'Source Sans Pro', sans-serif;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 20px;
+    background: var(--background-color);
+    color: var(--foreground-color);
+    text-shadow: 0em 0.1em 0.35em var(--shadow-color);
+    text-align: center;
 }
 
-code {
-	font-family: 'JetBrains Mono', monospace;
+::selection {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    text-shadow: 0em 0.1em 0.35em var(--background-color);
 }
 
-.panel {
-	background-color: var(--panel-color);
-	padding: 10px;
-	margin: 0 auto;
-	max-width: 70em;
-	box-shadow: 0em 0.1em 0.35em var(--shadow-color);
-	border: 1px solid var(--foreground-color);
-	border-top: 2px solid var(--link-color);
-	border-radius: 8px 0px 8px 0px;
+img {
+    border-radius: 10px;
+    width: auto;
+    box-shadow: 0em 0.1em 0.35em var(--shadow-color);
+    cursor: pointer !important;
 }
 
-.title {
-	margin-top: -15px;
+.socials, .langs {
+    padding-top: 20px;
+    font-size: 22px;
 }
 
-.subtitle {
-	margin-top: -25px;
-	font-style: italic;
+.socials h5 {
+    margin-bottom: 12.5px;
 }
 
-a:link, a:hover, a:active, a:visited {
-	color: var(--link-color);
-	transition: 0.125s linear;
-	text-decoration: none;
+.langs h5 {
+    margin-bottom: 15px;
+}
+
+.languages {
+    margin-top: 0px;
+    font-family: "Fira Code Nerd Font";
+    font-size: 26px;
+}
+
+a:link, a:visited, a {
+    text-decoration: none;
+    color: var(--accent-color);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 a:hover {
-	text-shadow: 0em 0.1em 0.35em var(--link-color);
-	text-decoration: none;
+    background-color: var(--accent-color);
+    cursor: pointer !important;
+    color: var(--background-color) !important;
+    transition: 0.125s ease-in-out;
+    text-shadow: 0em 0.1em 0.35em var(--background-color);
 }
 
-.entry-contents {
-	width: 85%;
-	padding-left: 25px;
-}
-
-td {
-	border-top: 1px solid var(--shadow-color);
-}
-
-.links {
-	margin-top: -15px;
-	font-size: 18px;
-	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
-}
-
-.git::before {
-	content: " ";
-	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
-}
-
-.license::before {
-	content: " ";
-	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
-}
-
-#projects {
-	padding-bottom: 10px;
-}
-
-.hr {
-	border-bottom: 2px solid var(--link-color);
-}
-
-.footer {
-	margin-top: -10px;
-	font-style: italic;
-	color: var(--shadow-color);
+.langs img:hover {
+    box-shadow: 0em 0.1em 0.35em var(--accent-color) !important;
+    transition: 0.125s ease-in-out;
+    cursor: pointer !important;
 }

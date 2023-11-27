@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Fira Sans";
+    src: url('/assets/fonts/FiraSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Fira Code Nerd Font";
+    src: url('/assets/fonts/FiraCodeNerdFontMono-Regular.ttf');
+}
