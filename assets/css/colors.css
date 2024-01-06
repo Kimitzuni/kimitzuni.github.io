@@ -1,7 +1,9 @@
 :root {
-    --background-color: #120d13;
-    --panel-background: #020202;
-    --shadow-color: #d8dee964;
-    --accent-color: #c768dd;
-    --foreground-color: #cec0b0;
+    --background-color: #110c15;
+    --foreground-color: #d0c9d8;
+    --accent-color: #c69eea;
+    --active-color: #61d1fb;
+    --panel-background: #1b1521;
+    --panel-border-color: #f8bfd4;
+    --selection-color: #f8bfd4;;
 }

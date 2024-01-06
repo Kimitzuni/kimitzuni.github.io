@@ -1,9 +1,24 @@
 @font-face {
-    font-family: "Fira Sans";
-    src: url('/assets/fonts/FiraSans-Regular.ttf');
+    font-family: "DM Mono";
+    src: url('/assets/fonts/DMMono-Regular.ttf');
 }
 
 @font-face {
-    font-family: "Fira Code Nerd Font";
-    src: url('/assets/fonts/FiraCodeNerdFontMono-Regular.ttf');
+    font-family: "DM Mono Italic";
+    src: url('/assets/fonts/DMMono-Italic.ttf');
+}
+
+@font-face {
+    font-family: "DM Mono Medium";
+    src: url('/assets/fonts/DMMono-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Space Mono";
+    src: url('/assets/fonts/SpaceMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Space Mono Italic";
+    src: url('/assets/fonts/SpaceMono-Italic.ttf');
 }

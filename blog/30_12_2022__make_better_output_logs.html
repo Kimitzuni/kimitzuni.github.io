@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Make Better Output Logs | Rebecca White" />
+        <meta name="author" content="Rebecca White" />
+        <meta property="og:title" content="Make Better Output Logs | Rebecca White" />
+        <meta property="og:image" content="https://kimitzuni.github.io/assets/img/theimage.png" />
+        <meta property="og:description" content="A blog post where I complain about the state of output logs on Linux" />
+        <meta property="twitter:site" content="@Kimitzuni" />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:creator" content="@Kimitzuni" />
+
+        <title>Make Better Output Logs | Rebecca White</title>
+        <link rel="icon" type="image/svg" href="/assets/img/svg/favicon.svg" />
+        <link rel="stylesheet" href="/assets/css/base.css" />
+        <script src="/assets/js/nav.js"></script>
+    </head>
+    
+    <body>
+        <div class="nav-container">
+            <nav class="nav">
+                <span class="nav-items">
+                    <span class="nav-item">{ <a href="/">Home</a> }</span>
+                    <span class="nav-item">{ <a href="/blog/" class="active">Blog</a> }</span>
+                </span>
+            </nav>
+        </div>
+
+        <div class="site-container">
+            <div class="sidebar">
+                <div class="menu">
+                    <h3>Where to find me</h3>
+                    <p>
+                        <span class="nav-items sidebarnav">
+                            <span class="nav-item">{ <a href="https://github.com/Kimitzuni">GitHub</a> }</span>
+                            <span class="nav-item">{ <a href="https://gitlab.com/Kimitzuni">GitLab</a> }</span>
+                            <span class="nav-item">{ <a href="https://twitter.com/Kimitzuni">Twitter</a> }</span>
+                            <span class="nav-item">{ <a href="https://tech.lgbt/Kimitzuni">Mastodon</a> }</span>
+                            <span class="nav-item">{ <a href="https://youtube.com/@Kimitzuni">YouTube</a> }</span>
+                            <span class="nav-item">{ <a href="discord://-/users/466295635176325147">Discord</a> }</span>
+                            <span class="nav-item">{ <a href="https://kimitzuni.bandcamp.com">Bandcamp</a> }</span>
+                        </span>
+                    </p>
+                    </center>
+                    <h3>On this site</h3>
+
+                    <details open="">
+                        <summary class="glow-text">
+                            <a href="/blog/">Blog</a>
+                        </summary>
+
+                        <section>
+                            <div>
+                                <a href="/blog/30_12_2022__make_better_output_logs.html">Make Better Output Logs</a>
+                            </div>
+                        </section>
+                    </details>
+                </div>
+                
+            </div>
+
+            <div class="site-content-container">
+                <div class="site-content">
+                    <div class="content">
+                        <h1>Make Better Output Logs</h1>
+
+                        <div class="blog-post-info">
+                            <span class="blog-post-info--date">📆 Dec. 30, 2022</span>
+                            <span class="blog-post-info--wordcount">📃 915 words</span>
+                        </div>
+
+                        <p>The fact that most programs on Linux don't have an output log that actually tells you what goes wrong
+                            is very frustrating. It would help a lot of people to just have an extra bit of the output tell you what
+                            went wrong. This is also more of a rant about Steam on Linux, more than anything else.</p>
+                        
+                        <div class="blog-toc">
+                            <h2 class="noborder">Table of Contents</h2>
+                            <ul>
+                                <li><a href="#valve-pls-fix">Valve, Pls Fix</a></li>
+                                <ul>
+                                    <li><a href="#a-note-about-steamcmd">A Note about <i>steamcmd</i></a></li>
+                                </ul>
+                                <li><a href="#suggestions">Suggestions</a></li>
+                            </ul>
+                        </div>
+
+                        <h2 id="valve-pls-fix">Valve, Pls Fix</h2>
+			<p>My frustration of this was recently heightened by Valve, and mostly with Steam. While I am a software developer, I do like to play games, recently I've
+			been playing through the Half-Life 2 series, and I'm currently on <a href="https://store.steampowered.com/app/420/HalfLife_2_Episode_Two/">HL2 - Episode 2</a>,
+			and I wanted to continue that. So, I installed opened Steam... and nothing. I thought, lets try it through the terminal. So that's what I did
+
+			<pre>
+                ~ $ steam
+                Couldn't import apt, please install python3-apt or update steamdeps for your distribution.
+                steam.sh[727]: Running Steam on opensuse-tumbleweed 20221229 64-bit
+                steam.sh[727]: STEAM_RUNTIME is enabled automatically
+                setup.sh[809]: Steam runtime environment up-to-date!
+                steam.sh[727]: Steam client's requirements are satisfied
+            </pre>
+
+			And still nothing. No log file that told me what went wrong, and just by looking at this output, you'd think it worked, because it didn't have any obvious
+			failures. But Steam still didn't open. So I now had to debug a program that should've been debugged by the multi-billion dollar comapny. So I ran <code>strace</code>
+			on Steam.
+
+			<pre>
+                ~ $ strace steam
+                execve("/usr/bin/steam", ["steam"], 0x7ffc209ad230 /* 91 vars */) = 0
+                brk(NULL)                               = 0x55d566470000
+                arch_prctl(0x3001 /* ARCH_??? */, 0x7fffbd8890f0) = -1 EINVAL (Invalid argument)
+                mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f14fa062000
+                access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+                openat(AT_FDCWD, "/usr/lib64/bash/glibc-hwcaps/x86-64-v3/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+                newfstatat(AT_FDCWD, "/usr/lib64/bash/glibc-hwcaps/x86-64-v3", 0x7fffbd888320, 0) = -1 ENOENT (No such file or directory)
+                openat(AT_FDCWD, "/usr/lib64/bash/glibc-hwcaps/x86-64-v2/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+                newfstatat(AT_FDCWD, "/usr/lib64/bash/glibc-hwcaps/x86-64-v2", 0x7fffbd888320, 0) = -1 ENOENT (No such file or directory)
+                openat(AT_FDCWD, "/usr/lib64/bash/tls/haswell/x86_64/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+                newfstatat(AT_FDCWD, "/usr/lib64/bash/tls/haswell/x86_64", 0x7fffbd888320, 0) = -1 ENOENT (No such file or directory)
+                openat(AT_FDCWD, "/usr/lib64/bash/tls/haswell/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+                newfstatat(AT_FDCWD, "/usr/lib64/bash/tls/haswell", 0x7fffbd888320, 0) = -1 ENOENT (No such file or directory)
+                openat(AT_FDCWD, "/usr/lib64/bash/tls/x86_64/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+                newfstatat(AT_FDCWD, "/usr/lib64/bash/tls/x86_64", 0x7fffbd888320, 0) = -1 ENOENT (No such file or directory)
+                openat(AT_FDCWD, "/usr/lib64/bash/tls/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+                newfstatat(AT_FDCWD, "/usr/lib64/bash/tls", 0x7fffbd888320, 0) = -1 ENOENT (No such file or directory)
+                openat(AT_FDCWD, "/usr/lib64/bash/haswell/x86_64/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+                newfstatat(AT_FDCWD, "/usr/lib64/bash/haswell/x86_64", 0x7fffbd888320, 0) = -1 ENOENT (No such file or directory)
+                openat(AT_FDCWD, "/usr/lib64/bash/haswell/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+                newfstatat(AT_FDCWD, "/usr/lib64/bash/haswell", 0x7fffbd888320, 0) = -1 ENOENT (No such file or directory)
+                openat(AT_FDCWD, "/usr/lib64/bash/x86_64/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+                newfstatat(AT_FDCWD, "/usr/lib64/bash/x86_64", 0x7fffbd888320, 0) = -1 ENOENT (No such file or directory)
+                openat(AT_FDCWD, "/usr/lib64/bash/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+                newfstatat(AT_FDCWD, "/usr/lib64/bash", 0x7fffbd888320, 0) = -1 ENOENT (No such file or directory)
+                openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+                newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=78295, ...}, AT_EMPTY_PATH) = 0
+                mmap(NULL, 78295, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f14fa04e000
+                close(3)</pre>
+			
+			And oh dear. That's quite a lot of libraries that just aren't found. Bare in mind that I had managed to open Steam previously, to install the games. But after a 
+			restart... It broke. Without telling me why or how. I decided to delete all trace of Steam from my home directory, and reinstall Steam. Steam did start working,
+			and on multiple closing and reopenings of it. But this was before I logged in. Though during its update thing, I did load Steam from the <code>$HOME/.steam</code>
+			binary, and that decided it would crash.
+
+            
+			<pre>
+                (steam:6469): GLib-GObject-CRITICAL **: 15:00:25.179: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+                crash_20221230150025_25.dmp[6954]: Uploading dump (out-of-process)
+                /tmp/dumps/crash_20221230150025_25.dmp
+                /home/rtiannew/.local/share/Steam/steam.sh: line 798:  6469 Segmentation fault      (core dumped) "$STEAMROOT/$STEAMEXEPATH" "$@"
+                ~ $ crash_20221230150025_25.dmp[6954]: Finished uploading minidump (out-of-process): success = yes
+                crash_20221230150025_25.dmp[6954]: response: CrashID=bp-526424d3-c755-4318-b5a3-413942221230
+                crash_20221230150025_25.dmp[6954]: file ''/tmp/dumps/crash_20221230150025_25.dmp'', upload yes: ''CrashID=bp-526424d3-c755-4318-b5a3-413942221230''
+</pre>
+                            I just thought that was kind of funny. But the library did infact load</p>
+
+                        <div class="blog-img-content">
+                            <div class="blog-img">
+                                <a href="https://raw.githubusercontent.com/Kimitzuni/kimitzuni.github.io/2023-archive/assets/blogimg/2022_30_12_better_output_logs_steamlibrary.png" />
+                                    <img src="https://raw.githubusercontent.com/Kimitzuni/kimitzuni.github.io/2023-archive/assets/blogimg/2022_30_12_better_output_logs_steamlibrary.png" />
+                                </a>
+                            </div>
+                            
+                            <div class="blog-img-caption">
+                                <i>Steam Library - After Many Attempts</i>
+                            </div>
+                        </div>
+            <p>So, I downloaded Half-Life 2 - Episode 2, and it loaded. This is good progress.</p>
+
+			<div class="blog-img-content">
+				<div class="blog-img">
+					<a href="https://raw.githubusercontent.com/Kimitzuni/kimitzuni.github.io/2023-archive/assets/blogimg/2022_30_12_better_output_logs_hl2e2.png">
+						<img src="https://raw.githubusercontent.com/Kimitzuni/kimitzuni.github.io/2023-archive/assets/blogimg/2022_30_12_better_output_logs_hl2e2.png" />
+					</a>
+				</div>
+
+				<div class="blog-img-caption">
+					<i>H λ L F - L I F E <sup>2</sup> &mdash; E P I S O D E  2 Title Screen</i>
+				</div>
+			</div>
+
+			<p>But will Steam still load when I restart it? There's only one way to find out. (Side note - I'm also doing this <i>as</i> I write this.) And it did indeed load. However,
+			there is still one more test. Will it load after a full restart? And the answer is... Actually yes</p>
+
+			<div class="blog-img-content">
+				<div class="blog-img">
+					<a href="https://raw.githubusercontent.com/Kimitzuni/kimitzuni.github.io/2023-archive/assets/blogimg/2022_30_12_better_output_logs_post_restart.png">
+						<img src="https://raw.githubusercontent.com/Kimitzuni/kimitzuni.github.io/2023-archive/assets/blogimg/2022_30_12_better_output_logs_post_restart.png" />
+					</a>
+				</div>
+
+				<div class="blog-img-caption">
+					<i>Steam actually working post-restart</i>
+				</div>
+			</div>
+
+			<h3 id="a-note-about-steamcmd">A Note about <i>steamcmd</i></h3>
+			<p>One thing that I do like is a command line only version of programs, and Steam does have this with <i>steamcmd</i>, though that was just out of the question.
+			It didn't even work. At all.
+			<pre>
+                ~ $ steamcmd
+                .......
+                [ 97%] Downloading update (56,907 of 57,385 KB)...
+                [ 99%] Downloading update (57,385 of 57,385 KB)...
+                [100%] Download Complete.
+                [100%] !!! Fatal Error: Download of package (steamcmd_public_all) failed after 0 bytes (0).
+			</pre></p>
+
+			<h2 id="suggestions">Suggestions</h2>
+			<p>If you want to make the users of your programs avoid headaches like this, and make it so they don't have to use <code>strace</code> to figure out what is going
+			on and why the program just won't work. Add a <code>--debug</code> type flag to your program, that gives just that little bit of extra information. And if you 
+			really want to help your users. Make a log file somewhere common.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
