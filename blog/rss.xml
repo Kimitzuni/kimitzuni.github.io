@@ -1,0 +1,96 @@
+<rss version="2.0">
+	<channel>
+		<title>Rebecca White's RSS Feed</title>
+		<link>https://kimitzuni.github.io/blog/</link>
+		<description>My Blog in RSS Form</description>
+		<language>en-gb</language>
+
+		<item>
+			<title>All Phones Are Annoying</title>
+			<guid>https://kimitzuni.github.io/blog/17_1_2024__all_phones_are_annoying.html</guid>
+			<link>https://kimitzuni.github.io/blog/17_1_2024__all_phones_are_annoying.html</link>
+			<pubDate>Wed, 17 Jan 2024, 00:00.00 -0000</pubDate>
+			<description><![CDATA[
+			<p>
+			All phones are designed to be annoying in very oddly specific ways. Sure you can argue and contest
+			this by showing the benefits they have had on humans as a whole, but additionally we can also point
+			to the disadvantages that they have had, such as people no longer want to be a part of the world
+			that is right outside their windows, and would much rather spend hours and hours on TikTok, YouTube,
+			Snapchat and Instagram. Which is a shame, because nature is great when you actually are focused on it.
+			So, you may be thinking that this is a weird opinion to have right, especially from an 18 year old. Well,
+			no not really, not when you actually think about it.
+			</p>
+
+			<p>
+			On my phones, I don't like the default Samsung firmware, because OneUI is a horrible, bloated mess
+			and I also don't trust OneUI and Samsung's firmware. So I choose to install LineageOS on my devices,
+			and for devices such as the Samsung Galaxy S7 (<code>herolte</code>), this is fine - as LineageOS builds
+			for <code>herolte</code> exist. However, let's switch the tables to a low end Samsung device. Where a 
+			LineageOS build <b><i>doesn't</i></b> exist. For example - Samsung Galaxy A12 (<code>a12s</code>). Luckily
+			on devices without a build, we can use a Generic System Image (GSI). But wait! A GSI is just the equivalent
+			of the <code>system.img</code> file. Samsung's modern firmwares use <code>super.img</code>, which combines
+			several of the images into one, so we can't just flash a <code>system.img</code> file anymore, we instead
+			have to unpack the <code>super.img</code> and repack it with our new <code>system.img</code> in there. Easy?
+			<br><br>
+	
+			But wait! There's more! Samsung Knox. Samsung Knox is one of the most infurating things I have ever had
+			to deal with. Knox <b>claims</b> to make your device safer, however &mdash; I disagree. It is only there to
+			make your life more difficult if you ever decide to actually do something with your phone. It will fight
+			you <b>every. single. step of the way.</b> Knox has a security check to see if your phone has been modified,
+			and if it has, it does a few things. 1 - it voids your warranty so good luck with that. 2 - you can no longer
+			use certain features of your phone, such as contactless payment. Samsung, you need to understand this:
+			<b>if I am unlocking the bootloader &mdash; I know what I'm doing. Stop trying to fight your users.</b>
+			It makes you look like Apple.
+
+			<br>
+			<br>
+
+			Ironically, the easiest phones to de-Google and install a custom ROM onto are the Google Pixel phones.<br><br>
+
+			People are probably going to suggest something like "well get a Google Pixel", "Buy an iPhone!", "buy a Microsoft
+			phone, I have lots of apps I swear". And, I don't want to. Because it just takes a cursory glance at the market
+			to understand that phone design and features have peaked a long time ago.</p>
+
+			<ul>
+				<li><b>Google</b> &mdash; They release a new Pixel phone like every 6 months or something, so the previous model
+					never gets a chance to fall in price, and they're all in on AI, so the phones are expensive;</li><br>
+
+				<li><b>Samsung</b> &mdash; Their phones will fight you every step of the way if they can. Low and mid range
+					Samsung Galaxy devices are awful, and the good phones are the Galaxy S and Z phones which are quite
+					often in the range of £1000+;</li><br>
+
+				<li><b>Huawei</b> &mdash; Essentially just copying the phone designs of Samsung;</li>
+				<li><b>Nokia</b> &mdash; Low budget Android devices, as Windows Mobile was a massive flop;</li>
+				<li><b>Research In Motion - BlackBerry</b> &mdash; Rest In Peace;</li>
+				<li><b>Apple</b> &mdash; No.</li>
+			</ul>
+		
+			<p>
+			The mobile phone market also finds itself in the unique situation of everyone wanting to innovate, but everyone
+			is copying each other so no actual innovation is getting done. The last big things in phone design were the Galaxy
+			Note's pen, biometric unlocking, the removal of physical home buttons, the removal of the headphone jack and making the
+			front-facing camera part of the screen.
+			</p>
+
+			<p>
+			Phones are especially annoying  nowadays if you want to repair it yourself. Even if you just need a new battery, replacing
+			it yourself is near impossible. Let's go back just 12 years to the Galaxy S3. That had a removable back cover and removable
+			battery. If your battery started to degrade and not hold as much charge, you simply bought a new one online (or in person,
+			we hadn't yet become that degenerate), and you simply took the old one out and put the new one in. A very simple process. But
+			now, you either have to be confident enough to use a heat gun on the back of a phone near the battery, or take it to someone
+			who is - and that isn't cheap either.<br><br>
+
+			I believe that this stems from the iPhone, as since the beginning of the iPhone in 2007,
+			Apple never wanted you going inside of it. In at least iPhone 4 - SE, you could take the screen out yourself (I don't know if
+			it was like this on any other models), but fundamentally you still had to know what type of screwdriver you needed, as it
+			wasn't a standard <code>+</code> or <code>-</code> screw. That would be way too easy.
+			</p>
+
+			<h2>Summary</h2>
+			<p>
+			Every phone is basically the same. Blame everyone.
+			</p>]]>
+		</description>
+	</item>
+</channel>
+</rss>
