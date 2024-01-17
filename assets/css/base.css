@@ -5,7 +5,13 @@
 	--active-color: #c768dd;
 }
 
+@font-face {
+	font-family: "Roboto Slab";
+	src: url('/assets/fonts/RobotoSlab-VariableFont_wght.ttf');
+}
+
 body {
+	font-family: "Roboto Slab";
 	max-width: 1050px;
 	margin-left: auto;
 	margin-right: auto;
@@ -13,6 +19,16 @@ body {
 	padding-bottom: 200px;
 	background: linear-gradient(to right,#111,#000022,#111);
 	color: var(--foreground-color);
+}
+
+.left ul li {
+	padding-top: 5px;
+}
+
+.blog-date {
+	font-weight: normal;
+	color: #aeaeae;
+	font-style: italic;
 }
 
 a, a.link, a.visited {
