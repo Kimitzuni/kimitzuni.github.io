@@ -17,8 +17,8 @@ body {
 	margin-right: auto;
 	margin-top: 30px;
 	padding-bottom: 200px;
-/* 	background: linear-gradient(to right,#111,#000022,#111); */
-	background: #222222;	
+/* 	background: linear-gradient(to right,#111,#000011,#111);  */
+ 	background: #000011; 	
 	color: var(--foreground-color);
 }
 
