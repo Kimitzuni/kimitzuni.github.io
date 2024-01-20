@@ -3,3 +3,5 @@ library_blank.html
 books
 color
 site-colors/
+*.php
+*.csv
