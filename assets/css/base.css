@@ -10,8 +10,13 @@
 	src: url('/assets/fonts/RobotoSlab-VariableFont_wght.ttf');
 }
 
+@font-face {
+	font-family: "Open Sans";
+	src: url('/assets/fonts/OpenSans.ttf');
+}
+
 body {
-	font-family: "Roboto Slab";
+	font-family: "Open Sans";
 	max-width: 1050px;
 	margin-left: auto;
 	margin-right: auto;

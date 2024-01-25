@@ -7,7 +7,7 @@ DateFormat_CSV="$(date +'%B %-d %Y')"
 printf ">>> Blog Title: "
 read title
 
-filename_safe="$(echo "$title" | sed 's/[!\,\.\$\"]//g')"
+filename_safe="$(echo "$title" | sed 's/[!\,\.\$\"]//g;s/ /_/g')"
 filename="blog/${DateFormat_File}__$filename_safe.php"
 
 cat << EOF > $filename
