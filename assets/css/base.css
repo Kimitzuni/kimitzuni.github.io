@@ -1,0 +1,150 @@
+@import url('/assets/css/fonts.css');
+@import url('/assets/css/colors.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.2/css/all.min.css');
+
+::selection {
+    background-color: var(--accent-color-magenta);
+    color: var(--background-color);
+    text-shadow: 0em 0.1em 0.35em var(--background-color);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    font-family: "MADE Tommy", sans-serif;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "LEMONMILK";
+}
+
+h2 {
+    border-bottom: 3px solid var(--foreground-color);
+    max-width: 8em;
+}
+
+h3 {
+    max-width: 15em;
+    border-bottom: 3px solid var(--foreground-color);
+}
+
+h4 {
+    margin-bottom: -10px;
+}
+
+.title {
+    margin-top: 0px;
+    font-size: 2.25em;
+    text-shadow: 0em 0.1em 0.35em var(--accent-color-blue);
+    color: var(--accent-color-blue);
+    text-align: center;
+    border: 0px !important;
+    max-width: 100% !important;
+}
+
+.subtitle {
+    font-size: 1.75em;
+    color: var(--accent-color-magenta);
+    text-shadow: 0em 0.1em 0.35em var(--accent-color-magenta);
+    text-align: center;
+    margin-top: -25px;
+    border: 0px !important;
+    max-width: 100% !important;
+}
+
+.body-contents {
+    max-width: 100em;
+    margin: 0 auto;
+    background-color: var(--shadow-color);
+    padding: 15px;
+    box-shadow: 0em 0.1em 0.35em var(--shadow-color);
+    border-radius: 8px;    
+}
+
+p:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, ul:hover, li:hover {
+    cursor: default;
+}
+
+h4 {
+    border-bottom: 2px solid var(--foreground-color);
+    max-width: 15em;
+}
+
+a, a:visited, a:link {
+    color: var(--accent-color-blue);
+    text-decoration: none;
+    transition: 0.125s ease-in-out;
+}
+
+a:hover {
+    color: var(--accent-color-magenta);
+    text-shadow: 0em 0.1em 0.35em var(--accent-color-magenta);
+    transition: 0.125s ease-in-out;
+    cursor: pointer !important;
+}
+
+.abstract {
+    max-width: 40em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.links ul, .links ul li, .links li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.15em;
+}
+
+.entry h4 {
+    margin-top: 0px;
+}
+
+.edu h4 {
+    margin-top: -20px;
+}
+
+.entry {
+    display: inline-block;
+    padding-right: 20px;
+    max-width: 30em;
+    height: 5em;
+}
+
+.entry:hover {
+    color: var(--accent-color-magenta);
+    transition: 0.125s ease-in-out;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    border: 1px solid var(--foreground-color);
+    transition: 0.125s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--accent-color-blue);
+    border: 1px solid var(--accent-color-blue);
+    color: var(--background-color);
+    transition: 0.125s ease-in-out;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--accent-color-magenta);
+    border: 1px solid var(--accent-color-magenta);
+    transition: 0.125s ease-in-out;
+}
+
+.hr {
+    background-color: #abb2bf;
+    height: 1px;
+}
